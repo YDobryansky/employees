@@ -1,6 +1,6 @@
 # Project: Employees
 
-### [Netlify App](https://...)
+### [Netlify App](https://it-employees.netlify.app/)
 
 ### The tech stack is:
 
