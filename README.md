@@ -15,4 +15,4 @@
 
 ### Author
 
-- [Yuriy Dobryanskiy]
+- [Yuriy Dobryanskiy](https://github.com/YDobryansky)
