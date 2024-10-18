@@ -1,0 +1,38 @@
+@import '@/index.scss';
+
+.call-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: -webkit-fill-available;
+  margin: 0 8px;
+
+  &__btn {
+    padding: 18px 16px;
+    border-radius: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  &__phone-number {
+    margin-bottom: 8px;
+    background-color: $colorGreyForButtonNumber;
+    font-size: 110%;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $colorWhite;
+    }
+  }
+
+  &__cancel {
+    background-color: $colorWhite;
+    font-weight: 500;
+    color: red;
+    font-size: 110%;
+  }
+}

@@ -1,0 +1,91 @@
+@import '@/index.scss';
+
+.employees {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    cursor: pointer;
+  }
+
+  &__year-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 22px 0;
+    color: $colorLightgrey;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__year-border {
+    width: 72px;
+    height: 1px;
+    background-color: $colorLightgrey;
+
+    &-left {
+      margin-left: 8px;
+    }
+
+    &-right {
+      margin-right: 8px;
+    }
+
+    @include for-large-up {
+      width: 40%;
+    }
+  }
+
+  &__year-title {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__img {
+    padding: 6px 16px 6px 0;
+  }
+
+  &__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $colorTextBlack;
+  }
+
+  &__tag {
+    margin-left: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorTextGrey;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: $colorTextGraphite;
+  }
+
+  &__birthday {
+    position: absolute;
+    right: 20px;
+    display: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: $colorTextGraphite;
+  }
+}

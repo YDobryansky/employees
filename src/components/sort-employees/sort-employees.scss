@@ -1,0 +1,136 @@
+@import '@/index.scss';
+
+.sort-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sort-block {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 95%;
+  height: 250px;
+  border-radius: 20px 20px 0 0;
+  background-color: $colorWhite;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  will-change: transform;
+
+  @include for-large-up {
+    top: 40%;
+    display: none;
+    width: 373px;
+    height: 192px;
+    transform: translateY(0);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px,
+      rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+  }
+
+  &_active {
+    display: block;
+    transform: translateY(0);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__close-btn {
+    width: 56px;
+    height: 4px;
+    margin: 12px 0 12px 0;
+    background-color: $colorLightgrey;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @include for-large-up {
+      position: absolute;
+      top: 24px;
+      right: 23px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      padding: 0;
+      border-radius: 50%;
+      background-color: $colorLightGray;
+    }
+  }
+
+  &__close-icon {
+    display: none;
+
+    @include for-large-up {
+      display: block;
+      width: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $colorTextBlack;
+
+    @include for-large-up {
+      margin-top: 24px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: end;
+    margin: 20px 16px;
+    cursor: pointer;
+  }
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-right: 20px;
+    background-color: $colorWhite;
+    border-radius: 100%;
+    border: 2px solid $colorViolet;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__button_active {
+    border: 6px solid $colorViolet;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $colorTextBlack;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: $colorTransparentBlack;
+}
