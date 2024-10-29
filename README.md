@@ -1,6 +1,6 @@
 # Project: Employees
 
-### [Netlify App](https://...)
+### [Netlify App](https://it-employees.netlify.app/)
 
 ### The tech stack is:
 
@@ -15,4 +15,4 @@
 
 ### Author
 
-- [Yuriy Dobryanskiy]
+- [Yuriy Dobryanskiy](https://github.com/YDobryansky)
