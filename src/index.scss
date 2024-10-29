@@ -1,40 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-$colorTextGraphite: #55555c;
-$colorTextGrey: #97979b;
-$colorLightgrey: #c3c3c6;
-$colorLightGray: #f7f7f8;
-$colorGreyForButtonNumber: #f5f5f5b2;
-$colorForBodyLightGrey: #e5e5e5;
-$colorWhite: #fff;
-$colorViolet: #6534ff;
-$colorTextLightViolet: #6334ffc1;
-$colorTextBlack: #050510;
-$colorTransparentBlack: #0505105c;
-$backGroundColorBlack: #00000060;
+@import './scss/variables.scss';
+@import './scss/common.scss';
+@import './scss/breakpoints.scss';
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: $colorTextBlack;
   background-color: $colorForBodyLightGrey;
-}
-
-.container {
-  margin: 0 16px;
-}
-
-.page {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1280px;
-  min-width: 375px;
-  min-height: 100vh;
-  background-color: $colorWhite;
-}
-
-@mixin for-large-up {
-  @media screen and (min-width: 1280px) {
-    @content;
-  }
 }

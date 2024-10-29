@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchEmployees } from '../gateways/index';
+import { fetchEmployees } from '../entities/gateways/index';
 export interface Employee {
   id?: string;
   name: string;

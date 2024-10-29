@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Navigation from '../navigation/Navigation';
 import Search from '../search/Search';
-import SortEmployees from '../sort-employees/SortEmployees';
+import SortEmployees from '../sort/SortEmployees';
 import './header.scss';
 
 const Header: React.FC = () => {

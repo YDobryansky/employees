@@ -14,18 +14,18 @@
     "src/**/*",
     "declarations.d.ts",
     "server.js",
-    "src/components/employee-info/components/call-on-number",
+    "src/features/Employees/employee-info/components/call-on-number",
     "src/header",
     "src/main",
     "src/navigation",
-    "src/components/search",
+    "src/features/Filter/search",
     "src/sort-employees",
-    "src/common/state",
-    "src/employee-info",
-    "src/employees-list-render",
-    "src/components/App.tsx",
+    "src/redux",
+    "src/Employees/employee-info",
+    "src/Employees/employees-list-render",
+    "src/features/App.tsx",
     "src/index.tsx",
-    "src/common/type.ts"
+    "src/entities/type.ts"
   ],
   "exclude": ["node_modules"]
 }

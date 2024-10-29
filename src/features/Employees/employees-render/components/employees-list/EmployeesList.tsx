@@ -2,9 +2,9 @@ import moment from 'moment';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Employee } from '../../../../common/state/employeesSlice';
-import { RootState } from '../../../../common/state/store';
-import { getDisplayedEmployees, groupedEmployees } from '../../../../common/utils/index';
+import { getDisplayedEmployees, groupedEmployees } from '../../../../../entities/types/index';
+import { Employee } from '../../../../../redux/employeesSlice';
+import { RootState } from '../../../../../redux/store';
 import './employees-list.scss';
 import NotFoundEmployees from './not-found-employees/NotFoundEmployees';
 

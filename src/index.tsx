@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { Provider } from 'react-redux';
-import { store } from './common/state/store';
+import App from './App';
 import './index.scss';
+import { store } from './redux/store';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 

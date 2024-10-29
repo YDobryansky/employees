@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchEmployees } from '../../common/gateways/index';
-import { AppDispatch, RootState } from '../../common/state/store';
+import { fetchEmployees } from '../../../entities/gateways/index';
+import { AppDispatch, RootState } from '../../../redux/store';
 import EmployeesList from './components/employees-list/EmployeesList';
 import Failed from './components/failed/Failed';
 import Skeleton from './components/skeleton/Skeleton';
