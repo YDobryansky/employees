@@ -3,12 +3,12 @@ import moment from 'moment';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { fetchEmployees } from '../../../entities/gateways/index';
-import { AppDispatch, RootState } from '../../../redux/store';
-import NotFoundEmployees from '../../Employees/employees-render/components/employees-list/not-found-employees/NotFoundEmployees';
+import { AppDispatch, RootState } from '../../common/redux/store';
+import { fetchEmployees } from '../../common/utils/gateway';
+import NotFoundEmployees from '../EmployeesList/components/employees-list/not-found-employees/NotFoundEmployees';
+import './EmployeeInfo.scss';
 import CallOnNumber from './components/call-on-number/CallOnNumber';
 import SkeletonEmployeeInfo from './components/skeleton-employee-info/SkeletonEmployeeInfo';
-import './employee-info.scss';
 
 type LocationState = {
   from: string;

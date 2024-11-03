@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchEmployees } from '../../../entities/gateways/index';
-import { AppDispatch, RootState } from '../../../redux/store';
-import EmployeesList from './components/employees-list/EmployeesList';
-import Failed from './components/failed/Failed';
+import { AppDispatch, RootState } from '../../common/redux/store';
+import { fetchEmployees } from '../../common/utils/gateway';
+import Failed from '../Error';
+import EmployeesListComp from './components/employees-list/EmployeesList';
 import Skeleton from './components/skeleton/Skeleton';
 
-const EmployeesListRender: React.FC = () => {
+const EmployeesList: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const status = useSelector((state: RootState) => state.employees.status);
 
@@ -23,7 +23,7 @@ const EmployeesListRender: React.FC = () => {
       content = <Skeleton />;
       break;
     case 'success':
-      content = <EmployeesList />;
+      content = <EmployeesListComp />;
       break;
     case 'failed':
       content = <Failed />;
@@ -39,4 +39,4 @@ const EmployeesListRender: React.FC = () => {
   );
 };
 
-export default EmployeesListRender;
+export default EmployeesList;

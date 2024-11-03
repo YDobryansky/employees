@@ -2,13 +2,13 @@ import moment from 'moment';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { getDisplayedEmployees, groupedEmployees } from '../../../../../entities/types/index';
-import { Employee } from '../../../../../redux/employeesSlice';
-import { RootState } from '../../../../../redux/store';
+import { Employee } from '../../../../common/redux/employeesSlice';
+import { RootState } from '../../../../common/redux/store';
+import { getDisplayedEmployees, groupedEmployees } from '../../../../common/utils/utils';
 import './employees-list.scss';
 import NotFoundEmployees from './not-found-employees/NotFoundEmployees';
 
-const EmployeesList: React.FC = () => {
+const EmployeesListComp: React.FC = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -75,4 +75,4 @@ const EmployeesList: React.FC = () => {
   );
 };
 
-export default EmployeesList;
+export default EmployeesListComp;

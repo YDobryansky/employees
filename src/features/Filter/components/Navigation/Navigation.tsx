@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { setSortPosition } from '../../../redux/employeesSlice';
-import { RootState } from '../../../redux/store';
+import { setSortPosition } from '../../../../common/redux/employeesSlice';
+import { RootState } from '../../../../common/redux/store';
 import tabs from './configs';
 import './navigation.scss';
 

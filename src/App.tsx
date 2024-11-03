@@ -1,9 +1,10 @@
 import React from 'react';
 import { RouteObject, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import EmployeeInfo from './features/Employees/employee-info/EmployeeInfo';
-import EmployeesListRender from './features/Employees/employees-render/EmployeesListRender';
-import Failed from './features/Employees/employees-render/components/failed/Failed';
-import Header from './features/Filter/header/Header';
+import EmployeeInfo from './features/EmployeeInfo/EmployeeInfo';
+import EmployeesListRender from './features/EmployeesList/EmployeesList';
+import Failed from './features/Error';
+
+import Header from './features/Filter';
 import './index.scss';
 
 const routes: RouteObject[] = [

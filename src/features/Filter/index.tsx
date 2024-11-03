@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Navigation from '../navigation/Navigation';
-import Search from '../search/Search';
-import SortEmployees from '../sort/SortEmployees';
-import './header.scss';
+import Navigation from './components/Navigation/Navigation';
+import Search from './components/Search/Search';
+import SortEmployees from './components/Sort/SortEmployees';
+import './index.scss';
 
 const Header: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();

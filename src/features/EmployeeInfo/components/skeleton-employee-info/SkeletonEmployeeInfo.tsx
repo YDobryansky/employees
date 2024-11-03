@@ -1,6 +1,4 @@
-//import '../../../../employees-render/components/skeleton/skeleton.scss';
-import '../../../employees-render/components/skeleton/skeleton.scss';
-
+import '../../../EmployeesList/components/skeleton/skeleton.scss';
 import './skeleton-employee-info.scss';
 
 const SkeletonEmployeeInfo = () => {

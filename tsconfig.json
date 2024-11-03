@@ -20,12 +20,12 @@
     "src/navigation",
     "src/features/Filter/search",
     "src/sort-employees",
-    "src/redux",
+    "src/common/redux",
     "src/Employees/employee-info",
     "src/Employees/employees-list-render",
     "src/features/App.tsx",
     "src/index.tsx",
-    "src/entities/type.ts"
+    "src/employee/type.ts"
   ],
   "exclude": ["node_modules"]
 }

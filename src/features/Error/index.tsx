@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import './failed.scss';
+import './index.scss';
 
-const Failed = () => {
+const Error = () => {
   return (
     <div className="failed">
       <img className="failed__icon" src="../../../../images/error-icon.png" alt="ERROR" />
@@ -14,4 +14,4 @@ const Failed = () => {
   );
 };
 
-export default Failed;
+export default Error;

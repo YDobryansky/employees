@@ -2,8 +2,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { setSortCriteria } from '../../../redux/employeesSlice';
-import { RootState } from '../../../redux/store';
+import { setSortCriteria } from '../../../../common/redux/employeesSlice';
+import { RootState } from '../../../../common/redux/store';
 import './sort-employees.scss';
 
 interface SortEmployeesProps {
