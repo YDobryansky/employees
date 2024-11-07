@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../common/redux/store';
-import { fetchEmployees } from '../../common/utils/gateway';
-import Failed from '../Error';
-import EmployeesListComp from './components/employees-list/EmployeesList';
-import Skeleton from './components/skeleton/Skeleton';
+import { AppDispatch, RootState } from '@/common/redux/store';
+import { fetchEmployees } from '@/common/utils/gateway';
+import Failed from '@/features/Error';
+import EmployeesListComp from './components/employees-list';
+import Skeleton from './components/skeleton';
 
 const EmployeesList: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();

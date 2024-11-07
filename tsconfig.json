@@ -8,24 +8,15 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "outDir": "./build",
-    "sourceMap": true
+    "sourceMap": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@employeesListComponents/*": ["src/features/EmployeesList/components/*"],
+      "@public/*": ["public/*"]
+    }
   },
-  "include": [
-    "src/**/*",
-    "declarations.d.ts",
-    "server.js",
-    "src/features/Employees/employee-info/components/call-on-number",
-    "src/header",
-    "src/main",
-    "src/navigation",
-    "src/features/Filter/search",
-    "src/sort-employees",
-    "src/common/redux",
-    "src/Employees/employee-info",
-    "src/Employees/employees-list-render",
-    "src/features/App.tsx",
-    "src/index.tsx",
-    "src/employee/type.ts"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

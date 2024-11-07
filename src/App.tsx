@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteObject, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import EmployeeInfo from './features/EmployeeInfo/EmployeeInfo';
-import EmployeesListRender from './features/EmployeesList/EmployeesList';
+import EmployeeInfo from './features/EmployeeInfo';
+import EmployeesListRender from './features/EmployeesList';
 import Failed from './features/Error';
 
 import Header from './features/Filter';

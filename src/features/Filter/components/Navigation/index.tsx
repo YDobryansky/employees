@@ -1,10 +1,10 @@
+import { setSortPosition } from '@/common/redux/employeesSlice';
+import { RootState } from '@/common/redux/store';
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { setSortPosition } from '../../../../common/redux/employeesSlice';
-import { RootState } from '../../../../common/redux/store';
 import tabs from './configs';
-import './navigation.scss';
+import styles from './index.module.scss';
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -32,14 +32,14 @@ const Navigation = () => {
   );
 
   return (
-    <nav className="navigation">
-      <div className="container">
-        <ul className="navigation__list">
+    <nav className={styles['navigation']}>
+      <div className={styles['container']}>
+        <ul className={styles['navigation__list']}>
           {tabs.map(({ label, position }, index) => (
             <li
               key={index}
-              className={`navigation__item ${
-                activeButton === position ? 'navigation__item_active' : ''
+              className={`${styles['navigation__item']} ${
+                activeButton === position ? styles['navigation__item_active'] : ''
               }`}
               onClick={() => handleButtonClick(position)}
             >

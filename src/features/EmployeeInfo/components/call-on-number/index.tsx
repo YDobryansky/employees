@@ -1,5 +1,5 @@
 import React from 'react';
-import './call-on-number.scss';
+import styles from './index.module.scss';
 
 interface CallOnNumberProps {
   phoneNumber: string | undefined;
@@ -8,11 +8,16 @@ interface CallOnNumberProps {
 
 const CallOnNumber: React.FC<CallOnNumberProps> = ({ phoneNumber, cancel }) => {
   return (
-    <div className="call-container">
-      <button className="call-container__phone-number call-container__btn">
+    <div className={styles['call-container']}>
+      <button
+        className={`${styles['call-container__phone-number']} ${styles['call-container__btn']}`}
+      >
         {phoneNumber ? phoneNumber : 'N/A'}
       </button>
-      <button className="call-container__cancel call-container__btn" onClick={() => cancel(false)}>
+      <button
+        className={`${styles['call-container__cancel']} ${styles['call-container__btn']}`}
+        onClick={() => cancel(false)}
+      >
         Cancel
       </button>
     </div>

@@ -1,14 +1,14 @@
+import { AppDispatch, RootState } from '@/common/redux/store';
+import { fetchEmployees } from '@/common/utils/gateway';
+import NotFoundEmployees from '@employeesListComponents/employees-list/not-found-employees';
 import { KeyboardArrowLeft, PhoneOutlined, Star, StarBorder } from '@mui/icons-material';
 import moment from 'moment';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { AppDispatch, RootState } from '../../common/redux/store';
-import { fetchEmployees } from '../../common/utils/gateway';
-import NotFoundEmployees from '../EmployeesList/components/employees-list/not-found-employees/NotFoundEmployees';
-import './EmployeeInfo.scss';
-import CallOnNumber from './components/call-on-number/CallOnNumber';
-import SkeletonEmployeeInfo from './components/skeleton-employee-info/SkeletonEmployeeInfo';
+import CallOnNumber from './components/call-on-number';
+import SkeletonEmployeeInfo from './components/skeleton-employee-info';
+import styles from './index.module.scss';
 
 type LocationState = {
   from: string;
@@ -53,34 +53,38 @@ const EmployeeInfo: React.FC = () => {
 
   return (
     <>
-      <section className={`employee-info ${callOnNumber ? 'dimmed' : ''}`}>
-        <div className={`employee-info__container ${callOnNumber ? 'dimmed' : ''}`}>
-          <div className="employee-info__header">
-            <button className="employee-info__close-btn" onClick={handleClose}>
+      <section className={`${styles['employee-info']} ${callOnNumber ? styles['dimmed'] : ''}`}>
+        <div
+          className={`${styles['employee-info__container']} ${
+            callOnNumber ? styles['dimmed'] : ''
+          }`}
+        >
+          <div className={styles['employee-info__header']}>
+            <button className={styles['employee-info__close-btn']} onClick={handleClose}>
               <KeyboardArrowLeft />
             </button>
-            <img src={avatar} className="employee-info__img" alt="avatar" />
-            <h3 className="employee-info__name">
+            <img src={avatar} className={styles['employee-info__img']} alt="avatar" />
+            <h3 className={styles['employee-info__name']}>
               {name}
-              <span className="employee-info__tag">{tag}</span>
+              <span className={styles['employee-info__tag']}>{tag}</span>
             </h3>
-            <p className="employee-info__position">
+            <p className={styles['employee-info__position']}>
               {position[0].toUpperCase() + position.slice(1)}
             </p>
           </div>
         </div>
-        <div className="employee-info__wrapper">
-          <div className="employee-info__age">
-            <div className="employee-info__star" onClick={() => setIsStarred(!isStarred)}>
+        <div className={styles['employee-info__wrapper']}>
+          <div className={styles['employee-info__age']}>
+            <div className={styles['employee-info__star']} onClick={() => setIsStarred(!isStarred)}>
               {isStarred ? <Star /> : <StarBorder />}
             </div>
             {birthDateMoment}
             <span>{age} years</span>
           </div>
-          <div className="employee-info__phone">
+          <div className={styles['employee-info__phone']}>
             <PhoneOutlined
               onClick={() => setCallOnNumber(!callOnNumber)}
-              className="employee-info__phone-number"
+              className={styles['employee-info__phone-number']}
             />
             {phone}
           </div>

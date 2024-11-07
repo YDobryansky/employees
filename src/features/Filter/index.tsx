@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Navigation from './components/Navigation/Navigation';
-import Search from './components/Search/Search';
-import SortEmployees from './components/Sort/SortEmployees';
-import './index.scss';
+import Navigation from './components/Navigation';
+import Search from './components/Search';
+import SortEmployees from './components/Sort';
+import styles from './index.module.scss';
 
 const Header: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,8 +43,8 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className="header">
-      <h1 className="header__title">Search</h1>
+    <div className={styles['header']}>
+      <h1 className={styles['header__title']}>Search</h1>
       <Search
         onBurgerMenuClick={handleBurgerMenuClick}
         onSearchChange={handleSearchChange}

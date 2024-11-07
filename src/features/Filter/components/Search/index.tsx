@@ -1,7 +1,7 @@
 import SegmentIcon from '@mui/icons-material/Segment';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './search.scss';
+import styles from './index.module.scss';
 
 interface SearchProps {
   onBurgerMenuClick: () => void;
@@ -55,11 +55,11 @@ const Search: React.FC<SearchProps> = ({ onBurgerMenuClick, onSearchChange, isSo
   }, []);
 
   return (
-    <div className="search">
-      <div className="container search__container">
-        <form className="search__form">
+    <div className={styles['search']}>
+      <div className={`${styles['container']} ${styles['search__container']}`}>
+        <form className={styles['search__form']}>
           <input
-            className="search__input"
+            className={styles['search__input']}
             type="search"
             placeholder="Enter name, tag, email..."
             value={searchTerm}
@@ -68,17 +68,21 @@ const Search: React.FC<SearchProps> = ({ onBurgerMenuClick, onSearchChange, isSo
           />
 
           {searchTerm.length <= 0 && (
-            <button type="button" className="search__burger-menu" onClick={onBurgerMenuClick}>
+            <button
+              type="button"
+              className={styles['search__burger-menu']}
+              onClick={onBurgerMenuClick}
+            >
               <SegmentIcon
-                className={`search__burger-menu-icon ${
-                  isSortOpen ? 'search__burger-menu-icon_open' : ''
+                className={`${styles['search__burger-menu-icon']} ${
+                  isSortOpen ? styles['search__burger-menu-icon_open'] : ''
                 }`}
               />
             </button>
           )}
         </form>
         {searchTerm && (
-          <button type="button" className="search__clear" onClick={clearInput}>
+          <button type="button" className={styles['search__clear']} onClick={clearInput}>
             Cancel
           </button>
         )}

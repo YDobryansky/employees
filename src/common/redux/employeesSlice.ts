@@ -1,5 +1,5 @@
+import { fetchEmployees } from '@/common/utils/gateway';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchEmployees } from '../../common/utils/gateway';
 export interface Employee {
   id?: string;
   name: string;
