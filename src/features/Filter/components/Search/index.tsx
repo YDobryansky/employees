@@ -3,11 +3,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './index.module.scss';
 
-interface SearchProps {
+type SearchProps = {
   onBurgerMenuClick: () => void;
   onSearchChange?: (searchTerm: string) => void;
   isSortOpen: boolean;
-}
+};
 
 const Search: React.FC<SearchProps> = ({ onBurgerMenuClick, onSearchChange, isSortOpen }) => {
   const location = useLocation();

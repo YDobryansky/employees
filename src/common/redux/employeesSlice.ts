@@ -1,30 +1,17 @@
 import { fetchEmployees } from '@/common/utils/gateway';
+import { Employee } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-export interface Employee {
-  id?: string;
-  name: string;
-  avatar?: string;
-  email: string;
-  phone?: string;
-  birthDate: string;
-  position: string;
-  tag: string;
-}
 
 interface EmployeeState {
   employees: Employee[];
-  sortCriteria: 'alphabet' | 'birthday';
   status: 'ok' | 'loading' | 'success' | 'failed';
   error: string | null;
-  sortPosition: 'all' | 'designer' | 'analyst' | 'manager' | 'android' | 'ios';
 }
 
 const initialState: EmployeeState = {
   employees: [],
-  sortCriteria: 'alphabet',
   status: 'ok',
-  error: null,
-  sortPosition: 'all'
+  error: null
 };
 
 const employeesSlice = createSlice({
@@ -33,15 +20,6 @@ const employeesSlice = createSlice({
   reducers: {
     setEmployees: (state, action: PayloadAction<Employee[]>) => {
       state.employees = action.payload;
-    },
-    setSortCriteria: (state, action: PayloadAction<'alphabet' | 'birthday'>) => {
-      state.sortCriteria = action.payload;
-    },
-    setSortPosition: (
-      state,
-      action: PayloadAction<'all' | 'designer' | 'analyst' | 'manager' | 'android' | 'ios'>
-    ) => {
-      state.sortPosition = action.payload;
     }
   },
   extraReducers: builder => {
@@ -60,6 +38,6 @@ const employeesSlice = createSlice({
   }
 });
 
-export const { setEmployees, setSortCriteria, setSortPosition } = employeesSlice.actions;
+export const { setEmployees } = employeesSlice.actions;
 
 export default employeesSlice.reducer;

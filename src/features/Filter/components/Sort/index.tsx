@@ -1,10 +1,9 @@
-import { setSortCriteria } from '@/common/redux/employeesSlice';
-import { RootState } from '@/common/redux/store';
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import styles from './index.module.scss';
+
+type SortCriteria = 'alphabet' | 'birthday';
 
 interface SortEmployeesProps {
   onClose: () => void;
@@ -12,25 +11,18 @@ interface SortEmployeesProps {
 }
 
 const SortEmployees: React.FC<SortEmployeesProps> = ({ onClose, isSortOpen }) => {
-  const dispatch = useDispatch();
-  const activeButton = useSelector((state: RootState) => state.employees.sortCriteria);
   const [searchParams, setSearchParams] = useSearchParams();
+  const activeButton = (searchParams.get('sort') as SortCriteria) || 'alphabet';
 
   const handleButtonClick = useCallback(
-    (buttonType: 'alphabet' | 'birthday') => {
+    (buttonType: SortCriteria) => {
       if (activeButton === buttonType) return;
 
-      dispatch(setSortCriteria(buttonType));
-
       const newParams = new URLSearchParams(searchParams);
-      if (buttonType === 'alphabet') {
-        newParams.delete('sort');
-      } else {
-        newParams.set('sort', 'byBirthday');
-      }
+      newParams.set('sort', buttonType);
       setSearchParams(newParams);
     },
-    [dispatch, activeButton, searchParams, setSearchParams]
+    [activeButton, searchParams, setSearchParams]
   );
 
   return (

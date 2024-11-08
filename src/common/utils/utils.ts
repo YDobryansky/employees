@@ -1,13 +1,5 @@
+import { Employee } from '@/types';
 import { format } from 'date-fns';
-
-type Employee = {
-  name: string;
-  email: string;
-  tag: string;
-  position: string;
-  birthDate: string;
-  sortedEmployees?: void;
-};
 
 export const getDisplayedEmployees = (
   employees: Employee[],
