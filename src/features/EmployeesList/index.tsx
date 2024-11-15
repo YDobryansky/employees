@@ -1,8 +1,8 @@
+import { fetchEmployees } from '@/common/gateway';
+import { AppDispatch, RootState } from '@/common/redux/store';
+import Failed from '@/features/Error';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '@/common/redux/store';
-import { fetchEmployees } from '@/common/utils/gateway';
-import Failed from '@/features/Error';
 import EmployeesListComp from './components/employees-list';
 import Skeleton from './components/skeleton';
 

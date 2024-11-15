@@ -1,5 +1,5 @@
 import { RootState } from '@/common/redux/store';
-import { getDisplayedEmployees, groupedEmployees } from '@/common/utils/utils';
+import { getDisplayedEmployees, groupedEmployees } from '@/common/utils';
 import { Employee } from '@/types';
 import moment from 'moment';
 import React from 'react';

@@ -1,5 +1,5 @@
+import { fetchEmployees } from '@/common/gateway';
 import { AppDispatch, RootState } from '@/common/redux/store';
-import { fetchEmployees } from '@/common/utils/gateway';
 import NotFoundEmployees from '@employeesListComponents/employees-list/not-found-employees';
 import { KeyboardArrowLeft, PhoneOutlined, Star, StarBorder } from '@mui/icons-material';
 import moment from 'moment';

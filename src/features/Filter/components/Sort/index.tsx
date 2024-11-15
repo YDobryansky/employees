@@ -5,10 +5,10 @@ import styles from './index.module.scss';
 
 type SortCriteria = 'alphabet' | 'birthday';
 
-interface SortEmployeesProps {
+type SortEmployeesProps = {
   onClose: () => void;
   isSortOpen: boolean;
-}
+};
 
 const SortEmployees: React.FC<SortEmployeesProps> = ({ onClose, isSortOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();

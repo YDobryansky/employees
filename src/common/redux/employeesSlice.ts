@@ -1,12 +1,12 @@
-import { fetchEmployees } from '@/common/utils/gateway';
+import { fetchEmployees } from '@/common/gateway';
 import { Employee } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface EmployeeState {
+type EmployeeState = {
   employees: Employee[];
   status: 'ok' | 'loading' | 'success' | 'failed';
   error: string | null;
-}
+};
 
 const initialState: EmployeeState = {
   employees: [],

@@ -1,12 +1,11 @@
-import { useCallback, useEffect } from 'react';
+import { Position } from '@/types'; // Import Position type
+import { useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import tabs from './configs';
 import styles from './index.module.scss';
-import { Position } from '@/types'; // Import Position type
 
 const Navigation = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const position = searchParams.get('position') || 'all';
 
   const handleButtonClick = useCallback(
     (buttonType: Position) => {
